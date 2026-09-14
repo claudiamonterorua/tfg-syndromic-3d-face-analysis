@@ -1,0 +1,16 @@
+{
+    "camera_name_mapping": {
+        "113032005223": "1",
+        "343033002620": "2",
+        "313033006453": "3",
+        "343033002621": "4",
+        "133032001132": "5",
+        "133032001133": "A",
+        "343033002617": "B",
+        "263033005489": "C",
+        "133032001135": "D",
+        "133032001137": "E"
+    },
+    "temporary_folder": "C:\\Users\\claud\\OneDrive\\Escritorio\\ControlCam\\temp", 
+    "final_folder": "C:\\Users\\claud\\OneDrive\\Escritorio\\ControlCam"
+}
