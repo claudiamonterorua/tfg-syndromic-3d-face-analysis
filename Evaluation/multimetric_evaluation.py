@@ -84,11 +84,13 @@ RANKING_FILE = FIG_DIR / "05_ranking_exploratory_global_score.png"
 BY_COUNTRY_FILE = FIG_DIR / "06_by_country_score.png"
 PIPELINE_FILE = FIG_DIR / "07_pipeline.png"
 
-# Independent dimensions displayed in the radar chart.
+# Components displayed in the radar chart.
 RADAR_METRICS = [
     "Geometric_Fidelity",
-    "Size_and_Shape_Correlation",
     "Phenotypic_Preservation",
+    "Size_and_Shape_Correlation",
+    "Morphometric_Fidelity",
+    "Exploratory_Global_Score",
 ]
 
 # The heatmap displays the main conceptual components and final score.
@@ -1839,7 +1841,7 @@ def create_radar_chart(overall):
         RADAR_METRICS
     )
 
-    if plot_df.empty or len(metrics) < 3:
+    if plot_df.empty or len(metrics) < 5:
         return
 
     plot_df = plot_df.dropna(
@@ -1851,9 +1853,11 @@ def create_radar_chart(overall):
         return
 
     label_map = {
-        "Geometric_Fidelity": "Geometric",
-        "Size_and_Shape_Correlation": "Size & shape",
+        "Geometric_Fidelity": "Geometric fidelity",
         "Phenotypic_Preservation": "Phenotypic preservation",
+        "Size_and_Shape_Correlation": "Size & shape correlation",
+        "Morphometric_Fidelity": "Morphometric fidelity",
+        "Exploratory_Global_Score": "Global score",
     }
 
     axis_labels = [
